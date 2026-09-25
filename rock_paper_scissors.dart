@@ -25,3 +25,9 @@ String pangalan_sa_player(int number) {
     print('You can only enter a name. Please try again.');
   }
 }
+// I-check kung valid ang move
+String? validateMove(String? input) {
+  String move = input?.trim().toLowerCase() ?? '';
+  // Ibalik ang move kung valid, kung dili null
+  return validMoves.contains(move) ? move : null;
+}
